@@ -22,7 +22,7 @@ var getWeather = function(city){
 
 
 
-  fetch("http://api.openweathermap.org/data/2.5/forecast?q="+city+"&unit=imperial&appid=" + apiKey)
+  fetch("https://api.openweathermap.org/data/2.5/forecast?q="+city+"&unit=imperial&appid=" + apiKey)
   .then(function(response){
     return response.json()
   })
@@ -68,7 +68,7 @@ var getWeather = function(city){
 
     console.log(humidity,uvi,temp,wind_speed)
 
-    var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q="+city+"&unit=imperial&appid=" + apiKey
+    var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&unit=imperial&appid=" + apiKey
     fetch(apiUrl).then(function(response){
 
       response.json().then(function(data){
