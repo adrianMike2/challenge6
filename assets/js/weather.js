@@ -18,6 +18,8 @@ var getWeather = function(city){
       cityArr = []
   }
 
+  
+
 
 
   fetch("http://api.openweathermap.org/data/2.5/forecast?q="+city+"&unit=imperial&appid=" + apiKey)
@@ -30,8 +32,9 @@ var getWeather = function(city){
     var lon = data.city.coord.lon;
   
     var apiUrl ="https:api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&appid="+apiKey
-  
+
     
+  
   
    return fetch(apiUrl)
   })
@@ -44,6 +47,7 @@ var getWeather = function(city){
     var uvi = data.current.uvi;
     var temp = data.current.temp;
     var wind_speed = data.current.wind_speed;
+
 
     var currentHum = document.createElement("p")
     currentHum.textContent = "humidty: " + humidity
@@ -127,6 +131,7 @@ citysubmitEl.addEventListener("click", function(event){
   console.log("click")
   var city = cityEl.value.trim();
   getWeather(city)
+  
 
   
 
