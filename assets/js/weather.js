@@ -31,7 +31,7 @@ var getWeather = function(city){
     var lat = data.city.coord.lat;
     var lon = data.city.coord.lon;
   
-    var apiUrl ="https:api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&appid="+apiKey
+    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&appid="+apiKey
 
     
   
